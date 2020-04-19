@@ -125,3 +125,5 @@ STATIC_URL = '/static/'
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media/')
 CART_SESSION_ID='cart'
+
+CELERY_BROKER_URL= "redis://localhost:6379/0"
