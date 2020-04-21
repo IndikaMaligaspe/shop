@@ -26,7 +26,7 @@
             </thead>
             <tbody>
                 {% for item in order.items.all %}
-                    <tr class="row {% cycel "1" "2" %}">
+                    <tr class="row {% cycle "1" "2" %}">
                         <td>{{ item.product.name }}</td>
                         <td class="num">${{ item.price }}</td>
                         <td class="num">${{ item.quantity }}</td>
@@ -41,7 +41,7 @@
         </table>
 
         <span class="{% if order.paid %}paid{% else %}pending{% endif %}">
-            {% if  order.paid %}Paide {% else %} Pending payment {% endif %}
+            {% if  order.paid %}Paid{% else %} Pending payment {% endif %}
         </span>
     </body>
 </html>
