@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
     'rosetta',
+    'parler',
 ]
 
 MIDDLEWARE = [
@@ -114,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-US'
 LANGUAGES = (
     ('en',_('English')),
     ('es',_('Spansih')),
@@ -123,6 +124,16 @@ LACALE_PATHS=(
     os.path.join(BASE_DIR,'locale/'),
 )
 
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'es'},
+    ),
+    'default':{
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
